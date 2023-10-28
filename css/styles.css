@@ -1117,7 +1117,7 @@ address {
         z-index: 999;
     }
 
-    .wrapper-burger-menu.is-open {
+    .wrapper-burger-menu.burger-is-open {
         visibility: visible;
         opacity: 1;
     }
@@ -1191,7 +1191,7 @@ address {
 /* Start modal window Phone */
 
 @media (max-width:767px) {
-    .modal-window {
+    .modal {
         width: 288px;
     }
 }
@@ -1217,11 +1217,11 @@ address {
         display: none;
     }
 
-    .wrapper-header {
+    .header-container {
         justify-content: space-between;
     }
 
-    .logo-header {
+    .header-logo-web {
         margin-right: 120px;
     }
 
@@ -1267,7 +1267,7 @@ address {
         text-align: left;
     }
 
-    .title-thd-p {
+    .about-us-item-text {
 
         font-weight: 500;
         line-height: 1.5;
@@ -1343,7 +1343,7 @@ address {
         flex-direction: row;
     }
 
-    .subscribe-p {
+    .subscribe-text {
         text-align: left;
     }
 

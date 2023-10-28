@@ -37,7 +37,7 @@
                 <a href="" class="header-menu-link">Contacts</a></li>
           </ul>
         </nav>        
-    <address class="header-address">
+    <address class="header-address address-nav">
           <ul class="header-address-menu">
             <li class="header-address-item">
                 <a class="header-menu-address-link" href="mailto:info@devstudio.com">info@devstudio.com</a><br /></li>
@@ -51,7 +51,12 @@
             <use href="./images/icons.svg#icon-burger-menu"></use>     
         </svg>
     </button>
-
+     <div class="wrapper-burger-menu" id="burger-is-open">
+         <button class="close-burger-menu" id="close-burger-menu">
+             <svg class="icon-close" width="8" height="8">
+                 <use href="./images/icons.svg#icon-close"></use>
+             </svg>
+         </button>
         <div class="wrapper-burger-nav">
         
             <ul class="burger-nav">
@@ -178,7 +183,7 @@
                         <!-- section class="framem" -->
                         <img src="./images/boy1.jpg" alt="Mark Guerrero" width="264" height="260">
                         <div class="our-team-name">
-                        <h3 class="ourteam-subtitle">Mark Guerrero</h3>
+                        <h3 class="ourteam-subtitle title-our-team">Mark Guerrero</h3>
                         <p class="ourteam-item-text">Product Designer</p>
                         <!-- <div class="socials-lan"> -->
                         <ul class="socials">
@@ -225,7 +230,7 @@
                         <!-- section class="framem" -->
                         <img src="./images/boy2.jpg" alt="Tom Ford" width="264" height="260">
                         <div class="our-team-name">
-                        <h3 class="ourteam-subtitle">Tom Ford</h3>
+                        <h3 class="ourteam-subtitle title-our-team">Tom Ford</h3>
                         <p class="ourteam-item-text">Frontend Developer</p>
                         <!-- <div class="socials-lan"> -->
                         <ul class="socials">
@@ -272,7 +277,7 @@
                         <!-- section class="framem" -->
                         <img src="./images/woman1.jpg" alt="Camila Garcia" width="264" height="260">
                         <div class="our-team-name">
-                        <h3 class="ourteam-subtitle">Camila Garcia</h3>
+                        <h3 class="ourteam-subtitle title-our-team">Camila Garcia</h3>
                         <p class="ourteam-item-text">Marketing</p>
                         <!-- <div class="socials-lan"> -->
                         <ul class="socials">
@@ -320,7 +325,7 @@
                         <img src="./images/boy3.jpg" alt="Daniel Wilson" width="264" height="260"
                         />
                         <div class="our-team-name">
-                        <h3 class="ourteam-subtitle">Daniel Wilson</h3>
+                        <h3 class="ourteam-subtitle title-our-team">Daniel Wilson</h3>
                         <p class="ourteam-item-text">UI Designer</p>
                         <!-- <div class="socials-lan"> -->
                         <ul class="socials">
@@ -538,7 +543,7 @@
         </div>
     </footer>
 <!-- Pop-up -->
-    <div class="backdrop is-open">
+    <div class="backdrop is-open" id="modal-is-open">
         <div class="modal">
             <button type="button" class="modal-close-button">
                 <svg class="modal-button-icon" width="8" height="8">
