@@ -106,6 +106,7 @@ address {
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-navigation {
@@ -136,6 +137,7 @@ address {
 }
 
 .header-menu-list {
+    display: none;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -640,7 +642,7 @@ address {
 /* button-footer */
 
 .container-subscribe {
-    padding-left: 80px;
+    /* padding-left: 80px; */
 }
 
 .subscribe-text {
@@ -712,7 +714,9 @@ address {
     margin-left: 16px;
 }
 
+/* < !-- Pop-up --> */
 .backdrop {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -960,6 +964,7 @@ address {
         line-height: 1.11111;
         letter-spacing: 0.72px;
         text-transform: capitalize;
+        text-align: center;
     }
 
     .hero {
@@ -1093,6 +1098,7 @@ address {
     /* Burger menu START */
 
     .wrapper-burger-btn {
+        display: none;
         display: block;
         border: 0;
         background-color: transparent;
@@ -1214,7 +1220,6 @@ address {
     }
 
     .wrapper-burger-btn {
-        display: none;
     }
 
     .header-container {
