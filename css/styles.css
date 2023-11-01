@@ -928,14 +928,19 @@ address {
 
 /* Tabl */
 
-@media (max-width: 1157px) {
+@media screen and (max-width: 1157px) {
 /* Header Mobile START + container */
 
-    .container {
+    /* .container {
         max-width: 720px;
         width: 1158;
         margin: 0 auto;
         padding: 0 15px;
+    } */
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .header {
@@ -1243,7 +1248,7 @@ address {
 
 /* Media Tablet START */
 
-@media (min-width: 767px) and (max-width: 1157px) {
+@media (min-width: 767px) and (max-width: 1158px) {
     .container {
         max-width: 1157px;
         width: 768px;
