@@ -938,7 +938,7 @@ address {
         padding: 0 15px;
     } */
     .container {
-        max-width: 1158px;
+        /* max-width: 1158px; */
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -1024,8 +1024,8 @@ address {
     }
 
     .ourteam-list {
-        /* flex-direction: column; */
-        gap: 72px;
+        /* flex-direction: column; 
+        gap: 72px; */
     }
 
     .ourteam-title,
