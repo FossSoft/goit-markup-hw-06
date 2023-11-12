@@ -31,6 +31,16 @@ p, h1,h2,h3,h4,h5,h6 {
     margin-bottom: 0;
 }
 
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
 ul,
 ol {
     list-style: none;
@@ -38,6 +48,11 @@ ol {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 
 .list {
@@ -70,11 +85,22 @@ address {
 }
 
 .container {
-    max-width: 1158px;
+    /* 12.11 max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    margin: 0 auto;
+    margin: 0 auto;*/
     /*outline: 2px solid rgb(80, 163, 98);*/
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 320px) {
+    .container {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 16px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -92,10 +118,10 @@ address {
 
 }
 
-.section {
+/* 12.11 .section {
     padding: 120px;
     padding-bottom: 120px;
-}
+}*/
 
 .about-us-h2 {
     position: absolute;
@@ -120,6 +146,18 @@ address {
     padding-bottom: 16px;
 }
 
+@media screen and (min-width: 768px) {
+    .header {
+        background-color: #fff;
+        border-bottom: 1px solid #e7e9fc;
+        padding-top: 24.5px;
+        padding-bottom: 8px;
+        box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+    }
+}   
+
 @media screen and (min-width: 1158px) {
     .header {
         padding: 24px 0;
@@ -127,8 +165,12 @@ address {
 }
 
 .header-container {
-    display: flex;
+    /* 12.11 display: flex;
     align-items: center;
+    justify-content: space-between;*/
+    display: flex;
+    margin: 0 auto;
+    padding: 0 17.5px;
     justify-content: space-between;
 }
 
@@ -138,14 +180,14 @@ address {
     display: flex;
 }
 
-@media screen and (min-width: 768px) {
+/* 12.11 @media screen and (min-width: 768px) {
 
     .header-navigation {
         display: flex;
         align-items: center;
         margin-right: auto;
     }
-}
+}*/
 
 .header-logo-web {
         color: #4D5AE5;
@@ -416,22 +458,37 @@ address {
 /* Section 1 */
 
 .hero {
-    background-color: #2E2F42;
+    /* 12.11 background-color: #2E2F42;
     padding-top: 72px;
     padding-bottom: 72px;
-                /* background-image: linear-gradient(rgba(46, 47, 66, 0.7)
-       rgba(46, 47, 66, 0.7)),
-       url(/images/people-office.jpg); */
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto;*/
+    background-color: #2E2F42;
+    padding: 72px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg.jpg);
+    max-width: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media screen and (min-device-pixel-ratio: 2),
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+        screen and (min-resolution: 2dppx) and (max-width: 767px),
+        screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/Dark-bg@2x.jpg);
+        }
+}
+
+/* 12.11 @media screen and (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     .hero {
@@ -439,7 +496,7 @@ address {
                 rgba(46, 47, 66, 0.7)),
             url(../images/Dark-bg-mob-2x.jpg);
     }
-}
+}*/
 
 @media screen and (min-width: 768px) {
     .hero {
@@ -481,15 +538,31 @@ address {
     }
 }
 
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: block;
+}
+
 .hero-title {
-    color: #FFF;
+    /*12.11 color: #FFF;
     font-size: 56px;
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.07;
     max-width: 496px;
     margin: 0 auto;
-    margin-bottom: 48px;
+    margin-bottom: 48px;*/
+    color: #FFF;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-bottom: 72px;
 }
 
 @media screen and (min-width: 768px) {
@@ -510,16 +583,14 @@ address {
 }
 
 .hero-button {
-    background-color: #4D5AE5;
+    /* 12.11 background-color: #4D5AE5;
     color: #FFF;
-    /* Button Text */
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    /* cursor: pointer; */
     display: block;
     min-width: 169px;
     height: 56px;
@@ -528,7 +599,22 @@ address {
     margin: 0 auto;
     gap: 10px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+    display: block;
+    background-color: #4D5AE5;
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    margin: 0 auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 72px;
 }
 
 .hero-button:hover,
@@ -539,7 +625,7 @@ address {
 /* Section 2 */
 
 .about-us {
-    padding: 120px 0;
+    /*12.11 padding: 120px 0;*/
 }
 
 @media screen and (min-width: 1158px) {
@@ -550,8 +636,15 @@ address {
 }
 
 .about-us-list {
+    /*12.11 display: flex;
+    gap: 24px;*/
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.list {
+    list-style-type: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -567,7 +660,7 @@ address {
 }
 
 .about-us-item {
-    width: calc((100% - 72px) / 4);
+    /* 12.11 width: calc((100% - 72px) / 4);*/
 }
 
 @media screen and (min-width: 768px) {
@@ -590,6 +683,8 @@ address {
     background-color: #f4f4fd;
     border-radius: 4px;
     margin-bottom: 8px;
+
+    display: none;
 }
 
 @media screen and (min-width: 1158px) {
@@ -620,13 +715,22 @@ address {
 }
 
 .about-us-subtitle {
-    color: #2E2F42;
-    /* Header 3 */
+    /* 12.11 color: #2E2F42;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-bottom: 8px;
+    margin-bottom: 8px;*/
+
+    color: var(--NAVY-BLUE, #2E2F42);
+        text-align: center;
+        font-family: Roboto;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        margin-bottom: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -644,11 +748,17 @@ address {
 }
 
 .about-us-item-text {
-    font-size: 16px;
+    /* 12.11 font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #434455;
+    color: #434455;*/
+    color: var(--SLATE, #434455);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 @media screen and (min-width: 1158px) {
@@ -661,7 +771,7 @@ address {
 
 .ourteam {
     background-color: #f4f4fd;
-    padding: 120px 0;
+    /* 12.11 padding: 120px 0;*/
 }
 
 @media screen and (min-width: 1158px) {
@@ -680,12 +790,16 @@ address {
     text-transform: capitalize;
     color: #2e2f42;
     margin-bottom: 72px;
+    font-family: "Roboto", sans-serif;
 }
 
 .ourteam-list {
     /* background-color: #FFFFFF; */
+    /* 12.11display: flex;
+    gap: 24px;*/
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
 }
 
 @media screen and (min-width: 768px) {
@@ -696,7 +810,7 @@ address {
 
 .ourteam-item {
     background-color: #FFFFFF;
-    width: calc((100% - 72px) / 4);
+    width: 264px;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -718,23 +832,24 @@ address {
 } */
 
 .ourteam-subtitle {
-        text-align: center;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
-        margin-bottom: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .ourteam-item-text {
-        text-align: center;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #434455;
-        margin-bottom: 8px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    margin-bottom: 8px;
 }
 
 /* .socials-lan {} */
@@ -768,6 +883,10 @@ address {
     background-color: #404bbf;
 }
 
+.link {
+    text-decoration: none;
+}
+
 .ourteam-socials-icon {
     fill: #f4f4fd;
 }
@@ -788,6 +907,7 @@ address {
 
 .ourportfolio-title {
         font-size: 36px;
+        font-family: "Roboto", sans-serif;
         font-weight: 700;
         line-height: 1.11;
         text-align: center;
@@ -820,7 +940,10 @@ address {
 }
 
 .ourportfolio-item {
-    width: calc((100% - 48px) / 3);
+    /* 12.11 width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+    background-color: #FFF;
+    width: 288px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -848,6 +971,7 @@ address {
 
 .ourportfolio-subtitle {
         color: #2E2F42;
+        font-family: "Roboto", sans-serif;
         font-size: 20px;
         font-weight: 500;
         line-height: 1.2;
@@ -857,6 +981,7 @@ address {
 
 .ourportfolio-item-text {
         color: #434455;
+        font-family: "Roboto", sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
@@ -874,7 +999,7 @@ address {
 }
 
 .ourportfolio-overlay {
-    position: absolute;
+    /* 12.11 position: absolute;
     margin: 0;
     top: 0;
     bottom: 0;
@@ -889,14 +1014,37 @@ address {
     color: #f4f4fd;
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;*/
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
 
 .footer {
-    background-color: #2e2f42;
-    padding: 100px 0;
+    /* 12.11 background-color: #2e2f42;
+    padding: 100px 0;*/
+    background-color: #2E2F42;
+    padding: 97.5px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-footer-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
 }
 
 @media screen and (min-width: 1158px) {
@@ -906,7 +1054,7 @@ address {
     }
 }
 
-.footer .container {
+/* 12.11 .footer .container {
     flex-wrap: wrap;
     display: flex;
     align-items: baseline;
@@ -929,12 +1077,15 @@ address {
         row-gap: 0;
         column-gap: 0;
     }
-}
+}*/
 
 
 .footer-section-logo {
-    width: 270px;
-    margin-right: 24px;
+    /* 12.11 width: 270px;
+    margin-right: 24px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-logo-btr {
@@ -961,11 +1112,18 @@ address {
 }
 
 .footer-text {
-    font-size: 16px;
+    /* 12.11 font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-    max-width: 264px;
+    max-width: 264px;*/
+    color: #F4F4FD;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    width: 288px;
 }
 
 /* .footer-text {
@@ -980,14 +1138,14 @@ address {
 }
 
 .footer-social-container {
-    font-size: 16px;
+    /* 12.11 font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
     max-width: 264px;
     font-weight: 500;
-    margin-right: 24px;
+    margin-right: 24px;*/
 }
 
 
@@ -1040,6 +1198,7 @@ address {
 
 .button-footer-text {
     font-weight: 500;
+    text-align: center;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -1048,8 +1207,12 @@ address {
 }
 
 .button-footer-form {
+    /* 12.11 display: flex;
+    gap: 24px;*/
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
 }
 
 @media screen and (min-width: 1158px) {
@@ -1064,11 +1227,10 @@ address {
 }
 
 .button-footer-form-input {
-    width: 264px;
+    /* 12.11 width: 264px;
     height: 40px;
     border: 1px solid #fff;
     background-color: transparent;
-    /*(щоб кнопка стала прозорою( на початку вона біла))*/
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.04em;
@@ -1076,9 +1238,18 @@ address {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     color: #ffffff;
-    /*для тексту в середині input*/
-    /*margin-right: 24px; (відступ від кнопки до форми) */
-    display: flex;
+    display: flex;*/
+    width: 288px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: #ffffff;
 }
 
 .button-footer-form-input::placeholder {
@@ -1090,7 +1261,6 @@ address {
 }
 
 .button-footer-input {
-    /*стиль тексту в кнопці*/
     color: #fff;
     text-align: center;
     font-size: 16px;
@@ -1098,7 +1268,6 @@ address {
     font-weight: 500;
     letter-spacing: 0.04em;
     cursor: pointer;
-    /*стиль кнопки*/
     padding: 8px 24px;
     border-radius: 4px;
     background: #4d5ae5;
@@ -1335,14 +1504,25 @@ address {
     stroke: #111;
 }
 
-@media screen and (min-width: 320px) {
-    .burger-btn {
+@media screen and (min-width: 768px) {
+    .burger-btn-menu-icon {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        line-height: 0;
     }
 }
+/* 12.11 @media screen and (min-width: 320px) {
+    .burger-btn {
+    }
+}*/
 
 @media screen and (min-width: 768px) {
     .burger-btn {
-        display: none;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        line-height: 0;
     }
 }
 
