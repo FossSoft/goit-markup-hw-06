@@ -1368,6 +1368,7 @@ address {
         flex-wrap: nowrap;
         align-items: baseline;
         column-gap: 0;
+        width: max-content;
     }
 }
 
