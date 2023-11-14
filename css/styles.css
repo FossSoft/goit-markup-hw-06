@@ -159,7 +159,9 @@ address {
 
 @media screen and (min-width: 1158px) {
     .header {
-        padding: 24px 0;
+        /* 14.11 padding: 24px 0; */
+        padding-top: 24px;
+        padding-bottom: 8px;
     }
 }
 
@@ -179,6 +181,12 @@ address {
         margin: 0 auto;
         padding: 0 15px;
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .header-container {
+        align-items: baseline;
     }
 }
 
@@ -372,7 +380,9 @@ address {
 
 @media screen and (min-width: 1158px) {
     .header-address-menu {
-        flex-direction: row;
+        /* 14.11 flex-direction: row;
+        gap: 40px;*/
+        display: flex;
         gap: 40px;
     }
 }
@@ -397,6 +407,14 @@ address {
     color: #404bbf;
 } */
 
+.header-menu-address-link:hover {
+        color: #404bbf;
+}
+
+.header-menu-address-link:focus {
+        color: #404bbf;
+}
+
 @media screen and (min-width: 768px) {
     .header-menu-address-link {
             color: #434455;
@@ -407,15 +425,17 @@ address {
             letter-spacing: 0.02em;
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
-    .header-menu-address-link:hover {
-        color: #404bbf;
-    }
-
-    .header-menu-address-link:focus {
-        color: #404bbf;
+}
+@media screen and (min-width: 1158px) {
+    .header-menu-address-link {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
     }
 }
+
 
 .mob-menu {
     position: fixed;
@@ -620,6 +640,13 @@ address {
     /*13.11 display: block;*/
 }
 
+@media screen and (min-width: 1158px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
 .hero {
     /* 12.11 background-color: #2E2F42;
     padding-top: 72px;
@@ -642,15 +669,6 @@ address {
     margin-right: auto;
 }
 
-@media screen and (min-resolution: 192dpi) and (max-width: 767px),
-        screen and (min-resolution: 2dppx) and (max-width: 767px),
-        screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
-        .hero {
-            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/Dark-bg@2x.jpg);
-        }
-}
-
 @media screen and (min-width: 768px) {
     .hero {
         background-color: #2E2F42;
@@ -670,6 +688,25 @@ address {
         }
 }
 
+@media screen and (min-width: 1158px) {
+    .hero {
+        background-color: #2E2F42;
+        padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/img-name.jpg);
+        max-width: 1440px;
+    }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+        screen and (min-resolution: 2dppx) and (min-width: 1158px),
+        screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office@2x.jpg);
+        }
+}
+                
 
 /* 12.11 @media screen and (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
@@ -755,6 +792,13 @@ address {
 
 @media screen and (min-width: 1158px) {
     .hero-title {
+        /* 14.11 margin-bottom: 48px;*/
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+        max-width: 496px;
+        margin: 0 auto;
         margin-bottom: 48px;
     }
 }
@@ -852,7 +896,8 @@ address {
 
 @media screen and (min-width: 1158px) {
     .about-us-item {
-        width: calc((100% - 3 * 24px) / 4);
+        /* 14.11 width: calc((100% - 3 * 24px) / 4); */
+        width: calc((100% - 72px) / 4);
     }
 }
 
@@ -869,7 +914,7 @@ address {
 
 @media screen and (min-width: 1158px) {
     .about-us-icon {
-        width: 264px;
+        /* 14.11 width: 264px;
         height: 112px;
         border-radius: 4px;
         border: 1px solid #8e8f99;
@@ -877,7 +922,15 @@ address {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 8px;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 112px;
+        background-color: #f4f4fd;
+        border-radius: 4px;
         margin-bottom: 8px;
+        border: 1px solid var(--LIGHT-SLATE, #8E8F99);
     }
 }
 
@@ -927,9 +980,16 @@ address {
 
 @media screen and (min-width: 1158px) {
     .about-us-subtitle {
-        font-weight: 500;
+        /* 14.11 font-weight: 500;
         font-size: 20px;
+        line-height: 1.2;*/
+        color: #2E2F42;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
         line-height: 1.2;
+        letter-spacing: 0.02em;
+        margin-bottom: 8px;
     }
 }
 
@@ -960,7 +1020,13 @@ address {
 
 @media screen and (min-width: 1158px) {
     .about-us-item-text {
+        /*14.11 font-weight: 400;*/
+        color: #434455;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
         font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
     }
 }
 
@@ -977,12 +1043,12 @@ address {
     }
 }    
 
-@media screen and (min-width: 1158px) {
+/* 14.11 @media screen and (min-width: 1158px) {
     .ourteam {
         padding-top: 120px;
         padding-bottom: 120px;
     }
-}
+}*/
 
 .ourteam-title {
     font-weight: 700;
@@ -1014,6 +1080,12 @@ address {
         column-gap: 24px;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .ourteam-list {
+        flex-wrap: nowrap;
     }
 }
 
@@ -1146,7 +1218,11 @@ address {
 
 @media screen and (min-width: 1158px) {
     .ourportfolio-list {
-        gap: 48px 24px;
+        /* 14.11 gap: 48px 24px;*/
+        display: flex;
+        flex-direction: row;
+        column-gap: 23px;
+        row-gap: 48px;
     }
 }
 
@@ -1175,7 +1251,8 @@ address {
 
 @media screen and (min-width: 1158px) {
     .ourportfolio-item {
-        width: calc((100% - 48px) / 3);
+        /* 14.11 width: calc((100% - 48px) / 3); -убрал полоску под картинкой*/
+        width: 360px;
     }
 }
 
@@ -1260,8 +1337,10 @@ address {
 
 @media screen and (min-width: 1158px) {
     .footer {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        /* 14.11 padding-top: 100px;
+        padding-bottom: 100px;*/
+        background-color: #2E2F42;
+        padding-top: 101.5px;
     }
 }
 
@@ -1282,6 +1361,16 @@ address {
         width: 596px;
     }
 }
+
+@media screen and (min-width: 1158px) {
+    .page-footer-div {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        column-gap: 0;
+    }
+}
+
 /* 12.11 .footer .container {
     flex-wrap: wrap;
     display: flex;
@@ -1319,6 +1408,13 @@ address {
 @media screen and (min-width: 768px) {
     .footer-section-logo {
         display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer-section-logo {
+        display: inline-block;
+        margin-right: 120px;
     }
 }
 
@@ -1368,6 +1464,12 @@ address {
 @media screen and (min-width: 768px) {
     .footer-text {
         /* 13.11 text-align: left;*/
+        width: 264px;
+    }
+
+}
+@media screen and (min-width: 1158px) {
+    .footer-text {
         width: 264px;
     }
 }
@@ -1430,14 +1532,16 @@ address {
 
 .button-footer {}
 
-@media screen and (min-width: 768px) {
+/* под !  14.11@media screen and (min-width: 768px) {
     .button-footer {
         text-align: left;
     }
-}
+}*/
 
 @media screen and (min-width: 1158px) {
-    .button-footer {}
+    .button-footer {
+        margin-left: 80px;
+    }
 }
 
 .button-footer-text {
@@ -1451,6 +1555,12 @@ address {
 }
 
 @media screen and (min-width: 768px) {
+    .button-footer-text {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1158px) {
     .button-footer-text {
         display: inline-block;
     }
@@ -1476,8 +1586,13 @@ address {
 
 @media screen and (min-width: 1158px) {
     .button-footer-form {
+        /* 14.11 flex-wrap: nowrap;
+        justify-content: flex-start;*/
+        display: flex;
+        flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: flex-start;
+        gap: 24px;
+        align-items: center;
     }
 }
 
@@ -1520,6 +1635,11 @@ address {
 }
 
 @media screen and (min-width: 768px) {
+    .button-footer-form-input {
+        width: 264px;
+    }
+}
+@media screen and (min-width: 1158px) {
     .button-footer-form-input {
         width: 264px;
     }
